@@ -162,6 +162,13 @@
       .main-title { font-size: 1.8rem; }
       .number { font-size: 1.4rem; }
     }
+    .expiry-highlight {
+     color: #ff4d4d;
+     font-weight: 700;
+     text-transform: uppercase;
+     font-size: 0.9rem;
+     letter-spacing: 1px;
+    }
   </style>
 </head>
 <body>
@@ -186,27 +193,28 @@
     </a>
    </div>
 
-  <p>
-    Agribank Online (Beta)<br>Expires in...
+  <p style="margin-bottom: 5px; margin-top: 25px;">
+   <strong>Agribank Online (Beta)</strong><br>
+   <span class="expiry-highlight">Expires in...</span>
   </p>
 
-  <div class="timer" style="margin-top: 20px;">
-    <div class="time-box">
-      <div id="days" class="number">00</div>
-      <div class="label">Days</div>
-    </div>
-    <div class="time-box">
-      <div id="hours" class="number">00</div>
-      <div class="label">Hours</div>
-    </div>
-    <div class="time-box">
-      <div id="minutes" class="number">00</div>
-      <div class="label">Mins</div>
-    </div>
-    <div class="time-box">
-      <div id="seconds" class="number">00</div>
-      <div class="label">Secs</div>
-    </div>
+  <div class="timer" style="margin-top: 10px;">
+   <div class="time-box">
+     <div id="days" class="number">00</div>
+     <div class="label">Days</div>
+   </div>
+   <div class="time-box">
+     <div id="hours" class="number">00</div>
+     <div class="label">Hours</div>
+   </div>
+   <div class="time-box">
+     <div id="minutes" class="number">00</div>
+     <div class="label">Mins</div>
+   </div>
+   <div class="time-box">
+     <div id="seconds" class="number">00</div>
+     <div class="label">Secs</div>
+   </div>
   </div>
 
   <footer>
@@ -240,6 +248,7 @@
 </body>
 
 </html>
+
 
 
 
