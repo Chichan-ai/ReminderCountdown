@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AGRIBANK ONLINE - VERSION 2</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --logo-width: 120px;
+      --btn-icon-size: 24px;
+    }
+
+    * {
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      margin: 0;
+      /* Using your local path from the first code, but keeping the overlay logic */
+      background: url('C:/Users/Lenovo/OneDrive - AGRIBUSINESS RURAL BANK INC/Desktop/PRIVATE FILES/Getting Started/agribankonline assets/agribankbg.png') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      color: #fff;
+      padding: 20px 0;
+    }
+
+    /* Dark overlay for readability */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: -1;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      padding: 30px;
+      border-radius: 24px;
+      max-width: 500px;
+      width: 92%;
+      text-align: center;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      animation: fadeIn 0.8s ease;
+    }
+
+    .logo {
+      width: var(--logo-width);
+      margin-bottom: 15px;
+    }
+
+    .main-title {
+      font-size: 2.2rem;
+      font-weight: 800;
+      display: block;
+      line-height: 1.1;
+      margin-bottom: 5px;
+    }
+
+    .expiry-text {
+      font-size: 1.0rem;
+      color: #ff4d4d;
+      font-weight: 100;
+      display: block;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* Timer Grid */
+    .timer {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin-bottom: 30px;
+    }
+
+    .time-box {
+      background: linear-gradient(145deg, #88f0a5, #1b9b46);
+      padding: 15px 5px;
+      border-radius: 15px;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3), 
+                  inset 0 4px 10px rgba(255, 255, 255, 0.3);
+    }
+
+    .number {
+      font-size: 1.8rem;
+      font-weight: 800;
+      line-height: 1;
+    }
+
+    .label {
+      font-size: 0.6rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      opacity: 0.9;
+      margin-top: 4px;
+    }
+
+    p {
+      font-size: 0.95rem;
+      line-height: 1.5;
+      margin-bottom: 30px;
+      opacity: 0.9;
+    }
+
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      text-decoration: none;
+      padding: 12px;
+      border-radius: 10px;
+      font-weight: 600;
+      color: #000;
+      background: #f6f7f4;
+      transition: 0.3s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+
+    .btn img {
+      width: var(--btn-icon-size);
+    }
+
+    footer {
+      margin-top: 20px;
+      font-size: 0.8rem;
+      opacity: 0.7;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 400px) {
+      .main-title { font-size: 1.8rem; }
+      .number { font-size: 1.4rem; }
+    }
+  </style>
+</head>
+<body>
+
+ <div class="card">
+  <img src="agribankonline assets/ABC-RB  - APPROVED  LOGO - FULL COLOR-08.png" class="logo" alt="Agribank">
+
+     <h1>Hi Ka-Agri!</h1>
+
+      <p>
+     Please be reminded that this app will only be available until 
+    <strong>February 20, 2026</strong>. 
+    Install the new app for future updates.
+     </p>
+    
+  <div class="links">
+    <a class="btn" href="https://play.google.com/store/apps/details?id=com.nextbank.ec.mobile.agribusiness" target="_blank">
+      <img src="C:\Users\Lenovo\OneDrive - AGRIBUSINESS RURAL BANK INC\Desktop\PRIVATE FILES\Getting Started\agribankonline assets\Playtore.png" alt="Google Play"> Download for Android
+    </a>
+    <a class="btn" href="https://apps.apple.com/ph/app/agr%C3%ACbank-online/id6743112834" target="_blank">
+      <img src="agribankonline assets/Apple.png" alt="App Store"> Download for iOS
+    </a>
+   </div>
+
+  <p>
+    Agribank Online (Beta)<br>Expires in...
+  </p>
+
+  <div class="timer" style="margin-top: 20px;">
+    <div class="time-box">
+      <div id="days" class="number">00</div>
+      <div class="label">Days</div>
+    </div>
+    <div class="time-box">
+      <div id="hours" class="number">00</div>
+      <div class="label">Hours</div>
+    </div>
+    <div class="time-box">
+      <div id="minutes" class="number">00</div>
+      <div class="label">Mins</div>
+    </div>
+    <div class="time-box">
+      <div id="seconds" class="number">00</div>
+      <div class="label">Secs</div>
+    </div>
+  </div>
+
+  <footer>
+    Thank you for your continued support.
+  </footer>
+</div>
+
+  <script>
+    const launchDate = new Date("February 20, 2026 12:00:00").getTime();
+    
+    const updateCountdown = () => {
+      const now = new Date().getTime();
+      const distance = launchDate - now;
+
+      if (distance < 0) {
+        document.querySelector(".expiry-text").innerText = "BETA EXPIRED";
+        document.querySelector(".timer").style.display = "none";
+        return;
+      }
+
+      document.getElementById("days").innerText = Math.floor(distance / (1000 * 60 * 60 * 24));
+      document.getElementById("hours").innerText = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      document.getElementById("minutes").innerText = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      document.getElementById("seconds").innerText = Math.floor((distance % (1000 * 60)) / 1000);
+    };
+
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+  </script>
+
+</body>
+</html>
