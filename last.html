@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AGRIBANK ONLINE - VERSION 2</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --logo-width: 90px;
+      --btn-icon-size: 24px;
+      --agri-green: #1b9b46;
+      --agri-light-green: #88f0a5;
+      --agri-red: #ff4d4d;
+    }
+
+    * {
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      margin: 0;
+      background: url('C:/Users/Lenovo/OneDrive - AGRIBUSINESS RURAL BANK INC/Desktop/PRIVATE FILES/Getting Started/agribankonline assets/agribankbg.png') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      color: #fff;
+      padding: 20px;
+    }
+
+    /* Dark overlay for readability */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.65);
+      z-index: -1;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
+      padding: 40px 30px;
+      border-radius: 28px;
+      max-width: 480px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 25px 50px rgba(0,0,0,0.6);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      animation: fadeIn 0.8s ease-out;
+    }
+
+    .logo {
+      width: 85px;
+      height: auto;
+      margin-bottom: 15px;
+      filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      font-weight: 800;
+      margin: 0 0 15px 0;
+      letter-spacing: -0.5px;
+    }
+
+    .lastcall-highlight {
+      color: var(--agri-red);
+      font-weight: 800;
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    p {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin-bottom: 25px;
+      color: rgba(255, 255, 255, 0.95);
+    }
+
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      text-decoration: none;
+      padding: 14px;
+      border-radius: 12px;
+      font-weight: 600;
+      color: #1a1a1a;
+      background: #ffffff;
+      transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      background: #f0f0f0;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    }
+
+    .btn img {
+      width: var(--btn-icon-size);
+      height: var(--btn-icon-size);
+      object-fit: contain;
+    }
+
+    /* Timer Grid */
+    .timer {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin: 15px 0 25px 0;
+    }
+
+    .time-box {
+      background: linear-gradient(145deg, var(--agri-light-green), var(--agri-green));
+      padding: 12px 5px;
+      border-radius: 16px;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .number {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: #fff;
+    }
+
+    .label {
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      opacity: 0.9;
+    }
+
+    .expiry-highlight {
+      color: var(--agri-red);
+      font-weight: bold;
+      letter-spacing: 1px;
+      font-size: 0.85rem;
+    }
+
+    footer {
+      margin-top: 25px;
+      font-size: 0.75rem;
+      opacity: 0.6;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 15px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 400px) {
+      .card { padding: 30px 20px; }
+      h1 { font-size: 1.8rem; }
+      .number { font-size: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+ <div class="card">
+  <img src="C:\Users\Lenovo\OneDrive - AGRIBUSINESS RURAL BANK INC\Desktop\PRIVATE FILES\Getting Started\agribankonline assets\ABC-RB  - APPROVED  LOGO - FULL COLOR-08.png" class="logo" alt="Agribank">
+
+  <h1>Hi Ka-Agri!</h1>
+
+  <p>
+    <span class="lastcall-highlight">IMPORTANT UPDATE</span>
+    Please be informed that this Agribank Online (Beta) app will only be available anytime, 
+    <strong>until further notice</strong>.
+  </p>
+  <p>
+    To continue enjoying our banking services and access our latest features, please download and switch to the latest
+    <strong>Agribank Online 2.0</strong> 
+    app today.
+  </p>
+    
+  <div class="links">
+    <a class="btn" href="https://play.google.com/store/apps/details?id=com.nextbank.ec.mobile.agribusiness" target="_blank">
+      <img src="C:\Users\Lenovo\OneDrive - AGRIBUSINESS RURAL BANK INC\Desktop\PRIVATE FILES\Getting Started\agribankonline assets\Playtore.png" alt="Google Play"> 
+      Download for Android
+    </a>
+    <a class="btn" href="https://apps.apple.com/ph/app/agr%C3%ACbank-online/id6743112834" target="_blank">
+      <img src="C:\Users\Lenovo\OneDrive - AGRIBUSINESS RURAL BANK INC\Desktop\PRIVATE FILES\Getting Started\agribankonline assets\Apple.png" alt="App Store"> 
+      Download for iOS
+    </a>
+  </div>
+
+  <footer>
+    Thank you for your continued support.
+  </footer>
+</div>
+
+<script>
+  const launchDate = new Date("February 20, 2026 18:28:00").getTime();
+  
+  const updateCountdown = () => {
+    const now = new Date().getTime();
+    const distance = launchDate - now;
+
+    if (distance < 0) {
+      document.getElementById("status-text").innerText = "Agribank Online (Beta) Expired";
+      document.getElementById("timer-container").style.display = "none";
+      return;
+    }
+
+    // Calculation with 2-digit padding
+    const d = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const h = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const m = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const s = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById("days").innerText = d.toString().padStart(2, '0');
+    document.getElementById("hours").innerText = h.toString().padStart(2, '0');
+    document.getElementById("minutes").innerText = m.toString().padStart(2, '0');
+    document.getElementById("seconds").innerText = s.toString().padStart(2, '0');
+  };
+
+  setInterval(updateCountdown, 1000);
+  updateCountdown();
+</script>
+
+</body>
+</html>
